@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 const FavoriteContext = createContext();
-const initialState = JSON.parse(localStorage.getItem("favorites" || '[]'))
+const initialState = JSON.parse(localStorage.getItem("favorites") || '[]')
 export const FavoritesProvider = ({ children }) => {
 
    const [favoriteSongs, setFavoriteSongs] = useState(initialState);
